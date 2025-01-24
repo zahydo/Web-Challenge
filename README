@@ -1,0 +1,67 @@
+# User Metrics Management System
+
+This is a simple user metrics management system that allows you to track user activities and generate reports.
+
+## Features
+
+- Back/light theme
+- Internationalization
+- Users Management
+- PDF download
+- API integration
+
+## Getting started
+
+### Database (Postgres Docker container)
+
+```bash
+docker run --name postgres-container --rm -e POSTGRES_PASSWORD=postgress_pass_123 -p 5432:5432 -d postgres
+```
+
+### Backend API
+
+Installing dependencies
+
+```
+yarn install
+```
+
+Create a `.env` file with the next content:
+
+```
+DATABASE_URL="postgresql://postgres:postgress_pass_123@localhost:5432/develop_db?schema=public"
+PORT=4000
+```
+
+Run the next commands to configure the DB and the ORM (Prisma)
+
+```
+npx prisma generate
+npx prisma migrate dev --name init
+```
+
+Start the backend
+
+```
+yarn start
+```
+
+### Frontend
+
+Installing dependencies
+
+```
+yarn install
+```
+
+Create a `.env` file with the next content:
+
+```
+NEXT_PUBLIC_BACK_END_API_URL=http://localhost:4000
+```
+
+Start the frontend
+
+```
+yarn dev
+```
