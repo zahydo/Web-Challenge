@@ -10,6 +10,11 @@ This is a simple user metrics management system that allows you to track user ac
 - PDF download
 - API integration
 
+## Repositories
+
+- [Frontend](https://github.com/zahydo/frontend-challenge-next)
+- [Backend](https://github.com/zahydo/backend-challenge)
+
 ## Getting started
 
 ### Database (Postgres Docker container)
@@ -23,6 +28,7 @@ docker run --name postgres-container --rm -e POSTGRES_PASSWORD=postgress_pass_12
 Installing dependencies
 
 ```
+cd users_api
 yarn install
 ```
 
@@ -51,6 +57,7 @@ yarn start
 Installing dependencies
 
 ```
+cd frontend
 yarn install
 ```
 
